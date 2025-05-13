@@ -16,11 +16,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geist.className} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300`}>
+      <body className={`${geist.className} antialiased min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300`}>
         <ThemeProvider>
           <Navigation />
-          <main>{children}</main>
-          <footer className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white py-8 transition-colors duration-300">
+          <main className="min-h-screen bg-white dark:bg-black transition-colors duration-300">{children}</main>
+          <footer className="bg-gray-100 dark:bg-black text-gray-900 dark:text-white py-8 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center">
                 <p>© {new Date().getFullYear()} CC3D. All rights reserved.</p>

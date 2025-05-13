@@ -27,7 +27,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <div className="pt-20 min-h-screen">
+    <div className="pt-20 min-h-screen bg-white dark:bg-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">Our Portfolio</h1>
         
@@ -35,7 +35,7 @@ export default function Portfolio() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioItems.map((item) => (
             <div key={item.id} className="group relative">
-              <div className="aspect-[4/3] relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+              <div className="aspect-[4/3] relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-900">
                 <Image
                   src={item.image}
                   alt={item.title}
