@@ -8,11 +8,11 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-2">
             <Image 
-              src="/CC3D_Logo.png" 
+              src="/CC3D_Cube_Logo.png" 
               alt="CC3D Logo" 
-              width={256} 
-              height={256}
-              className="w-24 h-16"
+              width={128} 
+              height={128}
+              className="w-12 h-12"
               quality={100}
               priority
             />
