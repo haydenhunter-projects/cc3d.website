@@ -6,7 +6,7 @@ const projects = {
   "modern-villa": {
     title: "Modern Villa",
     category: "Exterior",
-    image: "/istockphotoplaceholder.jpg",
+    // video: "/Modern_Row_Render.mp4",
     description: "A contemporary residential project featuring clean lines and sustainable design. This modern villa combines luxury living with environmental consciousness, incorporating large windows for natural light and energy-efficient systems throughout.",
     details: [
       "4,500 square feet of living space",
@@ -44,8 +44,9 @@ const projects = {
   }
 };
 
-export default function ProjectPage({ params }) {
-  const project = projects[params.slug];
+export default async function ProjectPage({ params }) {
+  const { slug } = await params;
+  const project = projects[slug];
 
   if (!project) {
     return (
@@ -73,13 +74,23 @@ export default function ProjectPage({ params }) {
           </Link>
           
           <div className="grid md:grid-cols-2 gap-12">
-            <div className="relative h-[400px] rounded-xl overflow-hidden">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover"
-              />
+            <div>
+              {project.video && slug === 'modern-villa' && (
+                <div className="rounded-xl overflow-hidden bg-gray-100">
+                  <h3 className="text-lg font-semibold text-gray-900 p-4 border-b border-gray-200">
+                    Project Walkthrough
+                  </h3>
+                  <div className="aspect-video relative">
+                    <video 
+                      controls
+                      className="w-full"
+                    >
+                      <source src={project.video} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              )}
             </div>
             
             <div>
