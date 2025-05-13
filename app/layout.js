@@ -1,6 +1,8 @@
 import { Geist } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
+import { ThemeProvider } from "./components/ThemeProvider";
+import ThemeToggle from "./components/ThemeToggle";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -13,17 +15,20 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geist.className} antialiased`}>
-        <Navigation />
-        <main>{children}</main>
-        <footer className="bg-black text-white py-8">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <p>© {new Date().getFullYear()} CC3D. All rights reserved.</p>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${geist.className} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300`}>
+        <ThemeProvider>
+          <Navigation />
+          <main>{children}</main>
+          <footer className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white py-8 transition-colors duration-300">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center">
+                <p>© {new Date().getFullYear()} CC3D. All rights reserved.</p>
+              </div>
             </div>
-          </div>
-        </footer>
+          </footer>
+          <ThemeToggle />
+        </ThemeProvider>
       </body>
     </html>
   );

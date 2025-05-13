@@ -25,7 +25,7 @@ export default function Home() {
           </p>
           <Link
             href="/portfolio"
-            className="bg-white text-black px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-100 transition-colors"
+            className="bg-white text-black dark:bg-gray-900 dark:text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           >
             View Our Work
           </Link>
@@ -35,7 +35,7 @@ export default function Home() {
       {/* Services Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Services</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -56,8 +56,8 @@ export default function Home() {
               }
             ].map((service, i) => (
               <div key={i} className="text-center">
-                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">{service.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
               </div>
             ))}
           </div>
@@ -65,9 +65,9 @@ export default function Home() {
       </section>
 
       {/* Featured Projects */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-50 dark:bg-gray-800 py-20 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">Featured Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[1, 2, 3].map((i) => (
               <div key={i} className="group relative aspect-[4/3] overflow-hidden rounded-lg">
@@ -89,7 +89,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/portfolio"
-              className="inline-block border border-black px-8 py-3 rounded-full text-lg font-medium hover:bg-black hover:text-white transition-colors"
+              className="inline-block border border-gray-900 dark:border-white px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-colors"
             >
               View All Projects
             </Link>
@@ -100,13 +100,13 @@ export default function Home() {
       {/* Contact CTA */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-3xl font-bold mb-6">Ready to Bring Your Vision to Life?</h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Ready to Bring Your Vision to Life?</h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
             Let's discuss your project and create stunning visualizations together
           </p>
           <Link
             href="/contact"
-            className="bg-black text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-900 transition-colors"
+            className="bg-gray-900 text-white dark:bg-white dark:text-gray-900 px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
           >
             Get in Touch
           </Link>
