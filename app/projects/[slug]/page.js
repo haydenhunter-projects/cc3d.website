@@ -1,0 +1,96 @@
+import Image from "next/image";
+import Link from "next/link";
+
+const projects = {
+  "modern-villa": {
+    title: "Modern Villa",
+    category: "Exterior",
+    image: "/istockphotoplaceholder.jpg",
+    description: "A contemporary residential project featuring clean lines and sustainable design. This modern villa combines luxury living with environmental consciousness, incorporating large windows for natural light and energy-efficient systems throughout.",
+    details: [
+      "4,500 square feet of living space",
+      "Sustainable materials and solar integration",
+      "Infinity pool with ocean views",
+      "Smart home automation"
+    ],
+    location: "Malibu, California"
+  },
+  "luxury-interior": {
+    title: "Luxury Interior",
+    category: "Interior",
+    image: "/istockphotoplaceholder.jpg",
+    description: "An elegant interior design project for a high-end penthouse. The space combines classic elements with modern luxury, featuring custom furniture and bespoke lighting solutions.",
+    details: [
+      "Open-concept living areas",
+      "Custom Italian marble finishes",
+      "Integrated home theater",
+      "Designer furniture collection"
+    ],
+    location: "Downtown Manhattan"
+  },
+  "office-complex": {
+    title: "Office Complex",
+    category: "Commercial",
+    image: "/istockphotoplaceholder.jpg",
+    description: "A state-of-the-art commercial office complex designed for the modern workforce. The project emphasizes collaborative spaces and workplace wellness, with a focus on natural light and green spaces.",
+    details: [
+      "200,000 square feet of office space",
+      "LEED Platinum certification",
+      "Rooftop garden and recreation area",
+      "Smart building management system"
+    ],
+    location: "Silicon Valley"
+  }
+};
+
+export default function ProjectPage({ params }) {
+  const project = projects[params.slug];
+
+  if (!project) {
+    return <div>Project not found</div>;
+  }
+
+  return (
+    <div className="pt-16">
+      <div className="max-w-6xl mx-auto px-6 py-12">
+        <Link 
+          href="/#portfolio" 
+          className="text-gray-600 hover:text-gray-900 mb-8 inline-block"
+        >
+          ← Back to Portfolio
+        </Link>
+        
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="relative h-[400px] rounded-xl overflow-hidden">
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover"
+            />
+          </div>
+          
+          <div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-2">{project.title}</h1>
+            <p className="text-gray-600 text-lg mb-6">{project.category}</p>
+            <p className="text-gray-600 mb-8">{project.description}</p>
+            
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h2 className="font-semibold text-gray-900 mb-4">Project Details</h2>
+              <ul className="space-y-2">
+                {project.details.map((detail, i) => (
+                  <li key={i} className="text-gray-600">• {detail}</li>
+                ))}
+              </ul>
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <p className="text-gray-600">
+                  <span className="font-semibold">Location:</span> {project.location}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+} 

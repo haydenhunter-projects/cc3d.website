@@ -12,7 +12,7 @@ export default function Home() {
             <div className="hidden md:flex space-x-8">
               <a href="#hero" className="text-gray-600 hover:text-gray-900">Home</a>
               <a href="#about" className="text-gray-600 hover:text-gray-900">About Us</a>
-              <a href="#services" className="text-gray-600 hover:text-gray-900">Services</a>
+              <Link href="/services" className="text-gray-600 hover:text-gray-900">Services</Link>
               <a href="#portfolio" className="text-gray-600 hover:text-gray-900">Portfolio</a>
               <a href="#contact" className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800">
                 Contact
@@ -91,31 +91,36 @@ export default function Home() {
                 {
                   title: "Modern Villa",
                   category: "Exterior",
-                  image: "/istockphotoplaceholder.jpg"
+                  image: "/istockphotoplaceholder.jpg",
+                  slug: "modern-villa"
                 },
                 {
                   title: "Luxury Interior",
                   category: "Interior",
-                  image: "/istockphotoplaceholder.jpg"
+                  image: "/istockphotoplaceholder.jpg",
+                  slug: "luxury-interior"
                 },
                 {
                   title: "Office Complex",
                   category: "Commercial",
-                  image: "/istockphotoplaceholder.jpg"
+                  image: "/istockphotoplaceholder.jpg",
+                  slug: "office-complex"
                 }
               ].map((project, i) => (
-                <div key={i} className="group cursor-pointer">
-                  <div className="relative h-64 rounded-xl overflow-hidden mb-4">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                <Link href={`/projects/${project.slug}`} key={i}>
+                  <div className="group cursor-pointer">
+                    <div className="relative h-64 rounded-xl overflow-hidden mb-4">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <h3 className="font-semibold text-gray-900">{project.title}</h3>
+                    <p className="text-gray-600">{project.category}</p>
                   </div>
-                  <h3 className="font-semibold text-gray-900">{project.title}</h3>
-                  <p className="text-gray-600">{project.category}</p>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
