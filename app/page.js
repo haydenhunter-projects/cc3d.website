@@ -49,7 +49,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
               Our Services
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-md text-gray-600">
               We offer comprehensive 3D visualization solutions to bring your architectural projects to life
             </p>
           </div>
@@ -101,17 +101,17 @@ export default function Home() {
               {
                 title: "Modern Villa",
                 category: "Exterior Visualization",
-                image: "/project1.jpg"
+                image: "/istockphotoplaceholder.jpg"
               },
               {
                 title: "Luxury Apartment",
                 category: "Interior Design",
-                image: "/project2.jpg"
+                image: "/istockphotoplaceholder.jpg"
               },
               {
                 title: "Office Complex",
                 category: "Commercial Project",
-                image: "/project3.jpg"
+                image: "/istockphotoplaceholder.jpg"
               }
             ].map((project, i) => (
               <div key={i} className="group cursor-pointer">
