@@ -25,14 +25,14 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/portfolio"
+              href="#projects"
               className="inline-flex items-center justify-center px-8 py-3 rounded-full text-lg font-medium 
                 bg-white text-gray-900 hover:bg-gray-100 transition-all duration-300"
             >
               View Our Work
             </Link>
             <Link
-              href="/contact"
+              href="#contact"
               className="inline-flex items-center justify-center px-8 py-3 rounded-full text-lg font-medium 
                 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
@@ -43,7 +43,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-white">
+      <section id="services" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
@@ -53,26 +53,26 @@ export default function Home() {
               We offer comprehensive 3D visualization solutions to bring your architectural projects to life
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 title: "Exterior Renderings",
-                description: "Photorealistic exterior visualizations that bring your architectural designs to life"
+                description: "Photorealistic exterior visualizations that showcase your architectural designs in their best light",
+                icon: "🏛️"
               },
               {
                 title: "Interior Renderings",
-                description: "Stunning interior visualizations with attention to materials, lighting, and detail"
+                description: "Stunning interior visualizations with meticulous attention to materials, lighting, and detail",
+                icon: "🏠"
               },
               {
                 title: "3D Walkthroughs",
-                description: "Immersive virtual tours that allow clients to experience spaces before they're built"
-              },
-              {
-                title: "Aerial Views",
-                description: "Bird's eye perspectives that showcase your project in its environmental context"
+                description: "Immersive virtual tours that allow clients to experience spaces before they're built",
+                icon: "🚶"
               }
             ].map((service, i) => (
-              <div key={i} className="text-center p-6 rounded-2xl hover:bg-gray-50 transition-colors">
+              <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+                <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">
                   {service.title}
                 </h3>
@@ -86,7 +86,7 @@ export default function Home() {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-24 bg-gray-50">
+      <section id="projects" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
@@ -96,38 +96,44 @@ export default function Home() {
               Explore our latest work and see how we help clients visualize their dreams
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-gray-100">
-                <Image
-                  src={`/featured-${i}.jpg`}
-                  alt={`Featured Project ${i}`}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-0 p-8">
-                    <h3 className="text-white text-xl font-semibold mb-2">Project Name</h3>
-                    <p className="text-white/80">Interior Visualization</p>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Modern Villa",
+                category: "Exterior Visualization",
+                image: "/project1.jpg"
+              },
+              {
+                title: "Luxury Apartment",
+                category: "Interior Design",
+                image: "/project2.jpg"
+              },
+              {
+                title: "Office Complex",
+                category: "Commercial Project",
+                image: "/project3.jpg"
+              }
+            ].map((project, i) => (
+              <div key={i} className="group cursor-pointer">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl mb-4">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
+                <h3 className="text-xl font-semibold text-gray-900">{project.title}</h3>
+                <p className="text-gray-600">{project.category}</p>
               </div>
             ))}
-          </div>
-          <div className="text-center mt-16">
-            <Link
-              href="/portfolio"
-              className="inline-flex items-center justify-center px-8 py-3 rounded-full text-lg font-medium 
-                border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300"
-            >
-              View All Projects
-            </Link>
           </div>
         </div>
       </section>
 
       {/* Contact CTA */}
-      <section className="py-24 bg-gray-900 text-white">
+      <section id="contact" className="py-24 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto text-center px-6">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
             Ready to Bring Your Vision to Life?
@@ -136,11 +142,11 @@ export default function Home() {
             Let's discuss your project and create stunning visualizations together
           </p>
           <Link
-            href="/contact"
+            href="mailto:contact@cc3d.com"
             className="inline-flex items-center justify-center px-8 py-3 rounded-full text-lg font-medium 
               bg-white text-gray-900 hover:bg-gray-100 transition-all duration-300"
           >
-            Get in Touch
+            Contact Us Today
           </Link>
         </div>
       </section>
