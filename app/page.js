@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="bg-white dark:bg-black transition-colors duration-300">
+    <div className="bg-white">
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
@@ -25,7 +25,7 @@ export default function Home() {
           </p>
           <Link
             href="/portfolio"
-            className="inline-block bg-white text-gray-900 dark:bg-black dark:text-white dark:border dark:border-white px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-100 dark:hover:bg-white dark:hover:text-black transition-all duration-300"
+            className="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-100 transition-all duration-300"
           >
             View Our Work
           </Link>
@@ -35,7 +35,7 @@ export default function Home() {
       {/* Services Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">
+          <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">
             Our Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -58,10 +58,10 @@ export default function Home() {
               }
             ].map((service, i) => (
               <div key={i} className="text-center">
-                <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-gray-600">
                   {service.description}
                 </p>
               </div>
@@ -71,14 +71,14 @@ export default function Home() {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-20 bg-gray-50 dark:bg-black border-t border-gray-100 dark:border-gray-800">
+      <section className="py-20 bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">
+          <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">
             Featured Projects
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-900">
+              <div key={i} className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-100">
                 <Image
                   src={`/featured-${i}.jpg`}
                   alt={`Featured Project ${i}`}
@@ -97,7 +97,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/portfolio"
-              className="inline-block border border-gray-900 dark:border-white px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
+              className="inline-block border border-gray-900 px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-900 hover:text-white transition-all duration-300"
             >
               View All Projects
             </Link>
@@ -108,15 +108,15 @@ export default function Home() {
       {/* Contact CTA */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">
             Ready to Bring Your Vision to Life?
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+          <p className="text-xl text-gray-600 mb-8">
             Let's discuss your project and create stunning visualizations together
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-gray-900 text-white dark:bg-white dark:text-black px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300"
+            className="inline-block bg-gray-900 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-800 transition-all duration-300"
           >
             Get in Touch
           </Link>
