@@ -1,27 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navigation from "./components/Navigation";
 
 export default function Home() {
   return (
     <>
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm z-50 border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-center justify-between h-16">
-            <span className="text-xl font-bold text-gray-900">CC3D</span>
-            <div className="hidden md:flex space-x-8">
-              <a href="#hero" className="text-gray-600 hover:text-gray-900">Home</a>
-              <a href="#about" className="text-gray-600 hover:text-gray-900">About Us</a>
-              <Link href="/services" className="text-gray-600 hover:text-gray-900">Services</Link>
-              <a href="#portfolio" className="text-gray-600 hover:text-gray-900">Portfolio</a>
-              <a href="#contact" className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800">
-                Contact
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-
+      <Navigation />
       <div className="min-h-screen bg-white pt-16">
         {/* Hero Section */}
         <section id="hero" className="py-20 bg-gray-900 text-white">

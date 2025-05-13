@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navigation from "../../components/Navigation";
 
 const projects = {
   "modern-villa": {
@@ -47,50 +48,62 @@ export default function ProjectPage({ params }) {
   const project = projects[params.slug];
 
   if (!project) {
-    return <div>Project not found</div>;
+    return (
+      <>
+        <Navigation />
+        <div className="pt-16">
+          <div className="max-w-6xl mx-auto px-6 py-12">
+            <div>Project not found</div>
+          </div>
+        </div>
+      </>
+    );
   }
 
   return (
-    <div className="pt-16">
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <Link 
-          href="/#portfolio" 
-          className="text-gray-600 hover:text-gray-900 mb-8 inline-block"
-        >
-          ← Back to Portfolio
-        </Link>
-        
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="relative h-[400px] rounded-xl overflow-hidden">
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className="object-cover"
-            />
-          </div>
+    <>
+      <Navigation />
+      <div className="pt-16">
+        <div className="max-w-6xl mx-auto px-6 py-12">
+          <Link 
+            href="/#portfolio" 
+            className="text-gray-600 hover:text-gray-900 mb-8 inline-block"
+          >
+            ← Back to Portfolio
+          </Link>
           
-          <div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">{project.title}</h1>
-            <p className="text-gray-600 text-lg mb-6">{project.category}</p>
-            <p className="text-gray-600 mb-8">{project.description}</p>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="relative h-[400px] rounded-xl overflow-hidden">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover"
+              />
+            </div>
             
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h2 className="font-semibold text-gray-900 mb-4">Project Details</h2>
-              <ul className="space-y-2">
-                {project.details.map((detail, i) => (
-                  <li key={i} className="text-gray-600">• {detail}</li>
-                ))}
-              </ul>
-              <div className="mt-4 pt-4 border-t border-gray-200">
-                <p className="text-gray-600">
-                  <span className="font-semibold">Location:</span> {project.location}
-                </p>
+            <div>
+              <h1 className="text-4xl font-bold text-gray-900 mb-2">{project.title}</h1>
+              <p className="text-gray-600 text-lg mb-6">{project.category}</p>
+              <p className="text-gray-600 mb-8">{project.description}</p>
+              
+              <div className="bg-gray-50 rounded-xl p-6">
+                <h2 className="font-semibold text-gray-900 mb-4">Project Details</h2>
+                <ul className="space-y-2">
+                  {project.details.map((detail, i) => (
+                    <li key={i} className="text-gray-600">• {detail}</li>
+                  ))}
+                </ul>
+                <div className="mt-4 pt-4 border-t border-gray-200">
+                  <p className="text-gray-600">
+                    <span className="font-semibold">Location:</span> {project.location}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 } 
