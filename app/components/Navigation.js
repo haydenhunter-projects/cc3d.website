@@ -7,15 +7,18 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-2">
-            <Image 
-              src="/CC3D_Cube_Logo.png" 
-              alt="CC3D Logo" 
-              width={128} 
-              height={128}
-              className="w-12 h-12"
-              quality={100}
-              priority
-            />
+            <div className="relative">
+              <Image 
+                src="/CC3D_Cube_Logo.png" 
+                alt="CC3D Logo" 
+                width={128} 
+                height={128}
+                className="w-12 h-12"
+                quality={100}
+                priority
+                unoptimized
+              />
+            </div>
             <span className="text-xl font-bold text-gray-900">CC3D</span>
           </Link>
           <div className="hidden md:flex space-x-8">
