@@ -1,11 +1,23 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm z-50 border-b border-gray-200">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-xl font-bold text-gray-900">CC3D</Link>
+          <Link href="/" className="flex items-center space-x-2">
+            <Image 
+              src="/CC3D_Logo.png" 
+              alt="CC3D Logo" 
+              width={256} 
+              height={256}
+              className="w-24 h-16"
+              quality={100}
+              priority
+            />
+            <span className="text-xl font-bold text-gray-900">CC3D</span>
+          </Link>
           <div className="hidden md:flex space-x-8">
             <Link href="/#hero" className="text-gray-600 hover:text-gray-900">Home</Link>
             <Link href="/#about" className="text-gray-600 hover:text-gray-900">About Us</Link>

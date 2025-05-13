@@ -11,6 +11,17 @@ export default function Home() {
         <section id="hero" className="py-20 bg-gray-900 text-white">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center">
+              <div className="flex justify-center mb-8">
+                <Image 
+                  src="/CC3D_Logo.png" 
+                  alt="CC3D Logo" 
+                  width={512} 
+                  height={1024}
+                  className="w-64 h-48"
+                  quality={100}
+                  priority
+                />
+              </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Bringing Architectural Visions to Life
               </h1>
