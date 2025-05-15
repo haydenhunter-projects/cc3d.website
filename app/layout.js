@@ -3,6 +3,10 @@ import "./globals.css";
 export const metadata = {
   title: "CC3D - Professional 3D Rendering & Visualization",
   description: "High-end architectural renderings, walkthroughs, interiors, and exteriors by CC3D.",
+  icons: {
+    icon: '/CC3D_Cube_Logo.png',
+    apple: '/CC3D_Cube_Logo.png',
+  },
 };
 
 export default function RootLayout({ children }) {

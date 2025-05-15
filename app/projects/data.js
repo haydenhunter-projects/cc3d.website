@@ -16,7 +16,7 @@ export const projects = {
   "luxury-interior": {
     title: "Luxury Interior",
     category: "Interior",
-    image: "/istockphotoplaceholder.jpg",
+    image: "/interior_render_evening_thumbnail.png",
     description: "An elegant interior design project for a high-end penthouse. The space combines classic elements with modern luxury, featuring custom furniture and bespoke lighting solutions.",
     details: [
       "Open-concept living areas",

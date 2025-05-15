@@ -90,7 +90,7 @@ export default function Home() {
                 {
                   title: "Luxury Interior",
                   category: "Interior",
-                  image: "/istockphotoplaceholder.jpg",
+                  image: "/interior_render_evening_thumbnail.png",
                   slug: "luxury-interior"
                 },
                 {
