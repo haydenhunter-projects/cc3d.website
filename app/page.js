@@ -134,12 +134,12 @@ export default function Home() {
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss your project and create stunning visualizations together
             </p>
-            <Link
-              href="mailto:codycurran3d@gmail.com"
+            <a
+              href="/contactus"
               className="inline-block px-8 py-3 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-100"
             >
               Contact Us Today
-            </Link>
+            </a>
           </div>
         </section>
       </div>

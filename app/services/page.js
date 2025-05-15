@@ -106,7 +106,7 @@ export default function ServicesPage() {
                 Contact us to discuss your project and discover how our services can bring your vision to life.
               </p>
               <a 
-                href="/#contact"
+                href="/contactus"
                 className="inline-block px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
               >
                 Contact Us Today

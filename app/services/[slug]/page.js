@@ -169,7 +169,7 @@ export default async function ServicePage({ params }) {
                     </p>
                   </div>
                   <Link
-                    href="/#contact"
+                    href="/contactus"
                     className="inline-block w-full px-6 py-3 bg-white text-gray-900 text-center rounded-lg hover:bg-gray-100 transition-colors"
                   >
                     Contact Us Today

@@ -29,7 +29,7 @@ export default function Navigation() {
             <Link href="/aboutus" className="text-gray-600 hover:text-gray-900">About Us</Link>
             <Link href="/projects" className="text-gray-600 hover:text-gray-900">Projects</Link>
             <Link href="/services" className="text-gray-600 hover:text-gray-900">Services</Link>
-            <Link href="/#contact" className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800">
+            <Link href="/contactus" className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800">
               Contact
             </Link>
           </div>

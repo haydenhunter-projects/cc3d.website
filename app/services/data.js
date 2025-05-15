@@ -21,7 +21,7 @@ export const services = {
     pricing: {
       basic: "Starting at $999",
       includes: [
-        "5 high-resolution render",
+        "5 high-resolution renders",
         "2 revision rounds",
         "1 time of day option",
         "Standard materials"
@@ -61,7 +61,7 @@ export const services = {
     pricing: {
       basic: "Starting at $1,299",
       includes: [
-        "5 interior scene render",
+        "5 interior scene renders",
         "3 revision rounds",
         "Material selection assistance"
       ],
