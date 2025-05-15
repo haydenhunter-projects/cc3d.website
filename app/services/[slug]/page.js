@@ -128,18 +128,54 @@ export default async function ServicePage({ params }) {
               </div>
             </div>
 
-            {/* CTA Section */}
-            <div className="text-center bg-gray-900 text-white p-12 rounded-xl">
-              <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Let's discuss your {service.title.toLowerCase()} project and create something amazing together.
-              </p>
-              <Link
-                href="/#contact"
-                className="inline-block px-8 py-3 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-colors"
-              >
-                Contact Us Today
-              </Link>
+            {/* Pricing Section - Full Width */}
+            <div className="mt-16 mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Pricing & Packages</h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                {/* Base Package */}
+                <div className="bg-gray-50 rounded-xl p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Base Package</h3>
+                  <p className="text-2xl font-bold text-gray-900 mb-6">{service.pricing.basic}</p>
+                  <h4 className="font-semibold text-gray-900 mb-3">Package Includes:</h4>
+                  <ul className="space-y-3 mb-4">
+                    {service.pricing.includes.map((item, i) => (
+                      <li key={i} className="text-gray-600 flex items-start">
+                        <span className="text-green-500 mr-2">✓</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Additional Options */}
+                <div className="bg-gray-50 rounded-xl p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Additional Options</h3>
+                  <ul className="space-y-3">
+                    {service.pricing.additionalOptions.map((option, i) => (
+                      <li key={i} className="text-gray-600 flex items-start">
+                        <span className="text-blue-500 mr-2">+</span>
+                        {option}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Get Started */}
+                <div className="bg-gray-900 text-white rounded-xl p-8 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4">Ready to Start?</h3>
+                    <p className="text-gray-300 mb-6">
+                      Contact us to discuss your project requirements and get a custom quote tailored to your needs.
+                    </p>
+                  </div>
+                  <Link
+                    href="/#contact"
+                    className="inline-block w-full px-6 py-3 bg-white text-gray-900 text-center rounded-lg hover:bg-gray-100 transition-colors"
+                  >
+                    Contact Us Today
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>

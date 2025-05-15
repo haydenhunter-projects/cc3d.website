@@ -18,6 +18,20 @@ export const services = {
       "Various viewing angles"
     ],
     turnaroundTime: "5-7 business days",
+    pricing: {
+      basic: "Starting at $999",
+      includes: [
+        "1 high-resolution render",
+        "2 revision rounds",
+        "1 time of day option",
+        "Standard materials"
+      ],
+      additionalOptions: [
+        "Additional viewpoints: $299 each",
+        "Night/evening renders: $399 each",
+        "Rush delivery (3-4 days): +50%"
+      ]
+    },
     idealFor: [
       "Architects",
       "Real estate developers",
@@ -44,6 +58,20 @@ export const services = {
       "Multiple perspective options"
     ],
     turnaroundTime: "7-10 business days",
+    pricing: {
+      basic: "Starting at $1,299",
+      includes: [
+        "1 interior scene render",
+        "3 revision rounds",
+        "Custom furniture placement",
+        "Material selection assistance"
+      ],
+      additionalOptions: [
+        "Additional room views: $399 each",
+        "Custom furniture modeling: Quote based on complexity",
+        "Rush delivery (5-6 days): +50%"
+      ]
+    },
     idealFor: [
       "Interior designers",
       "Residential projects",
@@ -71,6 +99,20 @@ export const services = {
       "Shareable online link"
     ],
     turnaroundTime: "10-14 business days",
+    pricing: {
+      basic: "Starting at $2,499",
+      includes: [
+        "60-second walkthrough",
+        "4K resolution",
+        "Custom camera path",
+        "Background music"
+      ],
+      additionalOptions: [
+        "Extended duration: $499/30 seconds",
+        "Interactive viewing mode: +$999",
+        "Rush delivery (7-9 days): +50%"
+      ]
+    },
     idealFor: [
       "Project presentations",
       "Marketing campaigns",
