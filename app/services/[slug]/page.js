@@ -47,17 +47,27 @@ export default async function ServicePage({ params }) {
               ← Back to Services
             </Link>
 
-            {/* Showcase Image Section */}
+            {/* Showcase Image/Video Section */}
             <div className="mb-16">
               <div className="max-w-[80%] mx-auto">
                 <div className="aspect-[16/9] relative rounded-xl overflow-hidden shadow-xl">
-                  <Image
-                    src={service.showcaseImage}
-                    alt={`${service.title} showcase`}
-                    fill
-                    className="object-cover"
-                    priority
-                  />
+                  {slug === '3d-walkthroughs' && service.videoUrl ? (
+                    <iframe
+                      src={service.videoUrl}
+                      title="Service Showcase Video"
+                      className="absolute inset-0 w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <Image
+                      src={service.showcaseImage}
+                      alt={`${service.title} showcase`}
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  )}
                 </div>
               </div>
             </div>

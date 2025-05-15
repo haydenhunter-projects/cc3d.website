@@ -11,7 +11,6 @@ export const projects = {
       "Infinity pool with ocean views",
       "Smart home automation"
     ],
-    location: "Malibu, California"
   },
   "luxury-interior": {
     title: "Luxury Interior",
@@ -24,12 +23,11 @@ export const projects = {
       "Integrated home theater",
       "Designer furniture collection"
     ],
-    location: "Downtown Manhattan"
   },
-  "office-complex": {
-    title: "Office Complex",
-    category: "Commercial",
-    image: "/istockphotoplaceholder.jpg",
+  "modern_residential_render": {
+    title: "Modern Residential Render",
+    category: "Residential",
+    image: "/modern_glass_residential_render_thumbnail.png",
     description: "A state-of-the-art commercial office complex designed for the modern workforce. The project emphasizes collaborative spaces and workplace wellness, with a focus on natural light and green spaces.",
     details: [
       "200,000 square feet of office space",
@@ -37,6 +35,5 @@ export const projects = {
       "Rooftop garden and recreation area",
       "Smart building management system"
     ],
-    location: "Silicon Valley"
   }
 }; 

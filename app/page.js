@@ -94,10 +94,10 @@ export default function Home() {
                   slug: "luxury-interior"
                 },
                 {
-                  title: "Office Complex",
-                  category: "Commercial",
-                  image: "/istockphotoplaceholder.jpg",
-                  slug: "office-complex"
+                  title: "Modern Residential Render",
+                  category: "Residential",
+                  image: "/modern_glass_residential_render_thumbnail.png",
+                  slug: "modern_residential_render"
                 }
               ].map((project, i) => (
                 <Link href={`/projects/${project.slug}`} key={i}>

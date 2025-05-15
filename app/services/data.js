@@ -2,7 +2,7 @@ export const services = {
   "exterior-renderings": {
     title: "Exterior Renderings",
     shortDescription: "Photorealistic architectural visualizations",
-    showcaseImage: "/row_home_render_thumbnail.png",
+    showcaseImage: "/row_home_render_night_exterior_service_thumbnail.png",
     fullDescription: "Transform your architectural designs into stunning photorealistic exterior renderings. Our service brings your vision to life with precise attention to materials, lighting, and environmental context.",
     features: [
       "High-resolution photorealistic renders",
@@ -55,6 +55,7 @@ export const services = {
     title: "3D Walkthroughs",
     shortDescription: "Interactive virtual project tours",
     showcaseImage: "/istockphotoplaceholder.jpg",
+    videoUrl: "https://www.youtube.com/embed/x__SCxowBYs",
     fullDescription: "Experience your space before it's built with our immersive 3D walkthroughs. We create interactive virtual tours that allow stakeholders to explore and understand the space in detail.",
     features: [
       "Smooth camera movements",
