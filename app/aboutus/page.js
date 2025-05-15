@@ -66,12 +66,12 @@ export default function AboutUsPage() {
                       description: "Utilizing cutting-edge 3D modeling and rendering software to create photorealistic visualizations"
                     },
                     {
-                      title: "Design Insight",
-                      description: "Deep understanding of architectural principles and current design trends"
+                      title: "Results That Matter",
+                      description: "Turning ideas into persuasive presentations that achieve measurable success"
                     },
                     {
-                      title: "Client Success",
-                      description: "Proven track record of delivering projects that exceed client expectations"
+                      title: "Client Collaboration",
+                      description: "Committed to clear communication and tailored solutions that drive client satisfaction"
                     }
                   ].map((item, i) => (
                     <div key={i} className="text-center">
