@@ -28,7 +28,7 @@ export const services = {
   "interior-design": {
     title: "Interior Design",
     shortDescription: "Detailed interior spaces with precise lighting",
-    showcaseImage: "/interior_render_evening_thumbnail.png",
+    showcaseImage: "/interior_render_service_thumbnail.png",
     fullDescription: "Create immersive interior visualizations that showcase spaces in their best light. Our interior rendering service focuses on creating atmospheric, detailed spaces that highlight design features and material selections.",
     features: [
       "Detailed material representation",
