@@ -3,7 +3,7 @@ export const projects = {
     title: "Row Housing Render",
     category: "Exterior & Interior",
     video: "https://www.youtube.com/watch?v=x__SCxowBYs",
-    image: "/istockphotoplaceholder.jpg",
+    image: "/row_home_render_thumbnail.png",
     description: "A contemporary residential project featuring clean lines and sustainable design. This modern villa combines luxury living with environmental consciousness, incorporating large windows for natural light and energy-efficient systems throughout.",
     details: [
       "4,500 square feet of living space",

@@ -84,7 +84,7 @@ export default function Home() {
                 {
                   title: "Row Housing Render",
                   category: "Exterior",
-                  image: "/istockphotoplaceholder.jpg",
+                  image: "/row_home_render_thumbnail.png",
                   slug: "row-housing-render"
                 },
                 {
