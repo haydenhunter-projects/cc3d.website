@@ -21,14 +21,14 @@ export const services = {
     pricing: {
       basic: "Starting at $999",
       includes: [
-        "1 high-resolution render",
+        "5 high-resolution render",
         "2 revision rounds",
         "1 time of day option",
         "Standard materials"
       ],
       additionalOptions: [
-        "Additional viewpoints: $299 each",
-        "Night/evening renders: $399 each",
+        "Additional viewpoints: $100 each",
+        "Night/evening renders: $50 each",
         "Rush delivery (3-4 days): +50%"
       ]
     },
@@ -61,13 +61,12 @@ export const services = {
     pricing: {
       basic: "Starting at $1,299",
       includes: [
-        "1 interior scene render",
+        "5 interior scene render",
         "3 revision rounds",
-        "Custom furniture placement",
         "Material selection assistance"
       ],
       additionalOptions: [
-        "Additional room views: $399 each",
+        "Additional room views: $100 each",
         "Custom furniture modeling: Quote based on complexity",
         "Rush delivery (5-6 days): +50%"
       ]
@@ -87,6 +86,7 @@ export const services = {
     fullDescription: "Experience your space before it's built with our immersive 3D walkthroughs. We create interactive virtual tours that allow stakeholders to explore and understand the space in detail.",
     features: [
       "Smooth camera movements",
+      "Custom character height",
       "Interactive viewing options",
       "Real-time lighting changes",
       "Detailed space exploration",
@@ -104,12 +104,12 @@ export const services = {
       includes: [
         "60-second walkthrough",
         "4K resolution",
-        "Custom camera path",
-        "Background music"
+        "Custom camera path"
       ],
       additionalOptions: [
-        "Extended duration: $499/30 seconds",
-        "Interactive viewing mode: +$999",
+        "Extended duration: $150/30 seconds",
+        "Interactive viewing mode (VR): +$999",
+        "Background music (Optional): Free",
         "Rush delivery (7-9 days): +50%"
       ]
     },
