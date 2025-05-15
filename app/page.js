@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "./components/Navigation";
+import { services } from "./services/data";
 
 export default function Home() {
   return (
@@ -54,25 +55,22 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Exterior Renderings",
-                  description: "Photorealistic architectural visualizations"
-                },
-                {
-                  title: "Interior Design",
-                  description: "Detailed interior spaces with precise lighting"
-                },
-                {
-                  title: "3D Walkthroughs",
-                  description: "Interactive virtual project tours"
-                }
-              ].map((service, i) => (
-                <div key={i} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <h3 className="text-xl font-semibold mb-3 text-gray-900">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
-                </div>
+              {Object.entries(services).map(([slug, service]) => (
+                <Link href={`/services/${slug}`} key={slug}>
+                  <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <h3 className="text-xl font-semibold mb-3 text-gray-900">{service.title}</h3>
+                    <p className="text-gray-600">{service.shortDescription}</p>
+                  </div>
+                </Link>
               ))}
+            </div>
+            <div className="text-center mt-12">
+              <Link 
+                href="/services" 
+                className="inline-block px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+              >
+                View All Services
+              </Link>
             </div>
           </div>
         </section>
