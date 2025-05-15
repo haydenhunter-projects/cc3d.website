@@ -1,9 +1,10 @@
 import Navigation from "../../components/Navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { services } from "../data";
 
-export default function ServicePage({ params }) {
-  const { slug } = params;
+export default async function ServicePage({ params }) {
+  const { slug } = await params;
   const service = services[slug];
 
   if (!service) {
@@ -31,6 +32,21 @@ export default function ServicePage({ params }) {
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 {service.shortDescription}
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Showcase Image Section */}
+        <section className="relative -mt-10 mb-16">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="aspect-[16/9] relative rounded-xl overflow-hidden shadow-2xl">
+              <Image
+                src={service.showcaseImage}
+                alt={`${service.title} showcase`}
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </section>
