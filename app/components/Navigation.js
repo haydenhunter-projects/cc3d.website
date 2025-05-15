@@ -24,12 +24,11 @@ export default function Navigation() {
             <span className="text-xl font-bold text-gray-900">CC3D</span>
           </Link>
           <div className="hidden md:flex space-x-8">
-            {/* Home, About Us, Services, Portfolio, Contact */}
+            {/* Home, About Us, Services, Projects, Contact */}
             <Link href="/#hero" className="text-gray-600 hover:text-gray-900">Home</Link>
-            <Link href="/#about" className="text-gray-600 hover:text-gray-900">About Us</Link>
+            <Link href="/aboutus" className="text-gray-600 hover:text-gray-900">About Us</Link>
             <Link href="/projects" className="text-gray-600 hover:text-gray-900">Projects</Link>
             <Link href="/services" className="text-gray-600 hover:text-gray-900">Services</Link>
-            <Link href="/#portfolio" className="text-gray-600 hover:text-gray-900">Portfolio</Link>
             <Link href="/#contact" className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800">
               Contact
             </Link>

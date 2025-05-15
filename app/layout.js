@@ -24,8 +24,9 @@ export default function RootLayout({ children }) {
               <div>
                 <h4 className="text-sm font-semibold text-gray-900 uppercase mb-4">Quick Links</h4>
                 <ul className="space-y-3">
-                  <li><a href="#services" className="text-gray-600 hover:text-gray-900">Services</a></li>
-                  <li><a href="#projects" className="text-gray-600 hover:text-gray-900">Projects</a></li>
+                  <li><a href="/aboutus" className="text-gray-600 hover:text-gray-900">About Us</a></li>
+                  <li><a href="/services" className="text-gray-600 hover:text-gray-900">Services</a></li>
+                  <li><a href="/projects" className="text-gray-600 hover:text-gray-900">Projects</a></li>
                   <li><a href="#contact" className="text-gray-600 hover:text-gray-900">Contact</a></li>
                 </ul>
               </div>
