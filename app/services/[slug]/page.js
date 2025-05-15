@@ -36,21 +36,6 @@ export default async function ServicePage({ params }) {
           </div>
         </section>
 
-        {/* Showcase Image Section */}
-        <section className="relative -mt-10 mb-16">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="aspect-[16/9] relative rounded-xl overflow-hidden shadow-2xl">
-              <Image
-                src={service.showcaseImage}
-                alt={`${service.title} showcase`}
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          </div>
-        </section>
-
         {/* Service Details */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-6">
@@ -61,6 +46,21 @@ export default async function ServicePage({ params }) {
             >
               ← Back to Services
             </Link>
+
+            {/* Showcase Image Section */}
+            <div className="mb-16">
+              <div className="max-w-[80%] mx-auto">
+                <div className="aspect-[16/9] relative rounded-xl overflow-hidden shadow-xl">
+                  <Image
+                    src={service.showcaseImage}
+                    alt={`${service.title} showcase`}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
 
             {/* Description */}
             <div className="prose prose-lg mx-auto mb-16">
