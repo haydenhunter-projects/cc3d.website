@@ -1,51 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../../components/Navigation";
+import { projects } from "../data";
 
 /* This is the page for the projects. It is used to display the project details. */
 /* This populates each individual project with the details from the projects object. */
-const projects = {
-  "row-housing-render": {
-    title: "Row Housing Render",
-    category: "Exterior & Interior",
-    video: "https://www.youtube.com/watch?v=x__SCxowBYs", 
-    description: "A contemporary residential project featuring clean lines and sustainable design. This modern villa combines luxury living with environmental consciousness, incorporating large windows for natural light and energy-efficient systems throughout.",
-    details: [
-      "4,500 square feet of living space",
-      "Sustainable materials and solar integration",
-      "Infinity pool with ocean views",
-      "Smart home automation"
-    ],
-    location: "Malibu, California"
-  },
-  "luxury-interior": {
-    title: "Luxury Interior",
-    category: "Interior",
-    image: "/istockphotoplaceholder.jpg",
-    description: "An elegant interior design project for a high-end penthouse. The space combines classic elements with modern luxury, featuring custom furniture and bespoke lighting solutions.",
-    details: [
-      "Open-concept living areas",
-      "Custom Italian marble finishes",
-      "Integrated home theater",
-      "Designer furniture collection"
-    ],
-    location: "Downtown Manhattan"
-  },
-  "office-complex": {
-    title: "Office Complex",
-    category: "Commercial",
-    image: "/istockphotoplaceholder.jpg",
-    description: "A state-of-the-art commercial office complex designed for the modern workforce. The project emphasizes collaborative spaces and workplace wellness, with a focus on natural light and green spaces.",
-    details: [
-      "200,000 square feet of office space",
-      "LEED Platinum certification",
-      "Rooftop garden and recreation area",
-      "Smart building management system"
-    ],
-    location: "Silicon Valley"
-  }
-};
-
 export default async function ProjectPage({ params }) {
   const { slug } = await params;
   const project = projects[slug];
@@ -69,10 +28,10 @@ export default async function ProjectPage({ params }) {
       <div className="pt-16">
         <div className="max-w-6xl mx-auto px-6 py-12">
           <Link 
-            href="/#portfolio" 
+            href="/projects" 
             className="text-gray-600 hover:text-gray-900 mb-8 inline-block"
           >
-            ← Back to Portfolio
+            ← Back to Projects
           </Link>
           
           {/* This provides the functionality for the Row Housing Render youtube video. */}
@@ -90,6 +49,19 @@ export default async function ProjectPage({ params }) {
                       className="w-full h-full"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
+                    />
+                  </div>
+                </div>
+              )}
+              
+              {!project.video && project.image && (
+                <div className="rounded-xl overflow-hidden bg-gray-100">
+                  <div className="aspect-video relative">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
                     />
                   </div>
                 </div>
