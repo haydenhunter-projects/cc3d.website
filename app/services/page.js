@@ -1,4 +1,5 @@
 import Navigation from "../components/Navigation";
+import Link from "next/link";
 import { services } from "./data";
 
 /* This is the page for the services. It is used to display the services. */
@@ -15,6 +16,18 @@ export default function ServicesPage() {
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Comprehensive 3D visualization solutions for your architectural projects
               </p>
+              {/* Quick Navigation Buttons */}
+              <div className="flex flex-wrap justify-center gap-4 mt-8">
+                {Object.entries(services).map(([slug, service]) => (
+                  <Link
+                    key={slug}
+                    href={`/services/${slug}`}
+                    className="px-6 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors"
+                  >
+                    {service.title}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -73,6 +86,12 @@ export default function ServicesPage() {
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-4">Turnaround Time</h3>
                         <p className="text-gray-600">{service.turnaroundTime}</p>
+                        <Link 
+                          href={`/services/${slug}`}
+                          className="inline-block mt-6 px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+                        >
+                          Learn More
+                        </Link>
                       </div>
                     </div>
                   </div>
