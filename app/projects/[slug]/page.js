@@ -2,11 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../../components/Navigation";
 
+/* This is the page for the projects. It is used to display the project details. */
+/* This populates each individual project with the details from the projects object. */
 const projects = {
-  "modern-villa": {
-    title: "Modern Villa",
-    category: "Exterior",
-    // video: "/Modern_Row_Render.mp4",
+  "row-housing-render": {
+    title: "Row Housing Render",
+    category: "Exterior & Interior",
+    video: "https://www.youtube.com/watch?v=x__SCxowBYs", 
     description: "A contemporary residential project featuring clean lines and sustainable design. This modern villa combines luxury living with environmental consciousness, incorporating large windows for natural light and energy-efficient systems throughout.",
     details: [
       "4,500 square feet of living space",
@@ -73,21 +75,22 @@ export default async function ProjectPage({ params }) {
             ← Back to Portfolio
           </Link>
           
+          {/* This provides the functionality for the Row Housing Render youtube video. */}
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              {project.video && slug === 'modern-villa' && (
+              {project.video && slug === 'row-housing-render' && (
                 <div className="rounded-xl overflow-hidden bg-gray-100">
                   <h3 className="text-lg font-semibold text-gray-900 p-4 border-b border-gray-200">
                     Project Walkthrough
                   </h3>
                   <div className="aspect-video relative">
-                    <video 
-                      controls
-                      className="w-full"
-                    >
-                      <source src={project.video} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
+                    <iframe
+                      src="https://www.youtube.com/embed/x__SCxowBYs"
+                      title="Project Walkthrough"
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
                   </div>
                 </div>
               )}

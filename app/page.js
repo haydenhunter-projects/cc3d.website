@@ -77,17 +77,17 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Portfolio */}
+        {/* Featured Projects */}
         <section id="portfolio" className="py-20">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Modern Villa",
+                  title: "Row Housing Render",
                   category: "Exterior",
                   image: "/istockphotoplaceholder.jpg",
-                  slug: "modern-villa"
+                  slug: "row-housing-render"
                 },
                 {
                   title: "Luxury Interior",
@@ -129,7 +129,7 @@ export default function Home() {
               Let's discuss your project and create stunning visualizations together
             </p>
             <Link
-              href="mailto:contact@cc3d.com"
+              href="mailto:codycurran3d@gmail.com"
               className="inline-block px-8 py-3 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-100"
             >
               Contact Us Today

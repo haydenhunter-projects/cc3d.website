@@ -32,9 +32,8 @@ export default function RootLayout({ children }) {
               <div>
                 <h4 className="text-sm font-semibold text-gray-900 uppercase mb-4">Contact</h4>
                 <ul className="space-y-3">
-                  <li className="text-gray-600">info@cc3d.com</li>
-                  <li className="text-gray-600">+1 (555) 123-4567</li>
-                  <li className="text-gray-600">123 Design Street<br />Creative City, ST 12345</li>
+                  <li className="text-gray-600">codycurran3d@gmail.com</li>
+                  <li className="text-gray-600">+1 (910)-616-3473</li>
                 </ul>
               </div>
             </div>
