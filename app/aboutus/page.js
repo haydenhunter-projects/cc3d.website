@@ -99,7 +99,7 @@ export default function AboutUsPage() {
                   <h4 className="text-xl font-bold text-gray-900 mb-2">Cody Curran</h4>
                   <p className="text-gray-600 mb-4">Founder & Lead Designer</p>
                   <p className="text-gray-600 max-w-2xl mx-auto">
-                    With a background in architectural design and a passion for 3D visualization, 
+                    With a background in 3D visualization and a passion for architectural design, 
                     Cody leads CC3D in creating stunning architectural renderings and immersive experiences 
                     that help clients bring their visions to life.
                   </p>
