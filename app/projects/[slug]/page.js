@@ -81,9 +81,6 @@ export default async function ProjectPage({ params }) {
                   ))}
                 </ul>
                 <div className="mt-4 pt-4 border-t border-gray-200">
-                  <p className="text-gray-600">
-                    <span className="font-semibold">Location:</span> {project.location}
-                  </p>
                 </div>
               </div>
             </div>

@@ -30,7 +30,6 @@ export default function ProjectsPage() {
                   <div className="p-6">
                     <h3 className="font-semibold text-xl text-gray-900 mb-2">{project.title}</h3>
                     <p className="text-gray-600 mb-2">{project.category}</p>
-                    <p className="text-gray-500 text-sm mb-3">{project.location}</p>
                     <p className="text-gray-600 line-clamp-2">{project.description}</p>
                   </div>
                 </div>

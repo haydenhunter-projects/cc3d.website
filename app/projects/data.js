@@ -1,15 +1,16 @@
 export const projects = {
   "row-housing-render": {
     title: "Row Housing Render",
-    category: "Exterior & Interior",
+    category: "3D Virtual Walkthrough",
     video: "https://www.youtube.com/watch?v=x__SCxowBYs",
     image: "/row_home_render_thumbnail.png",
-    description: "A contemporary residential project featuring clean lines and sustainable design. This modern villa combines luxury living with environmental consciousness, incorporating large windows for natural light and energy-efficient systems throughout.",
+    description: "A contemporary row home development characterized by clean lines, cohesive urban design, and sustainable architecture. This project blends modern aesthetics with eco-friendly materials to create functional, energy-efficient living spaces in a thoughtfully planned community.",
     details: [
       "4,500 square feet of living space",
       "Sustainable materials and solar integration",
-      "Infinity pool with ocean views",
-      "Smart home automation"
+      "5 Bathrooms",
+      "5 Bedrooms",
+      "Spacious living areas"
     ],
   },
   "luxury-interior": {
