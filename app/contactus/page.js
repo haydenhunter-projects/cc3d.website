@@ -23,7 +23,7 @@ export default function ContactPage() {
             <div className="grid md:grid-cols-4 gap-12">
               {/* Google Form */}
               <div className="md:col-span-3">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfSNO2PvA0tnnrPrmXL-BjLIW-2Ze2OZI4TFUFfT65a24WlKA/viewform?embedded=true" width="800" height="2115" frameborder="0" marginheight="0" marginwidth="0">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfSNO2PvA0tnnrPrmXL-BjLIW-2Ze2OZI4TFUFfT65a24WlKA/viewform?embedded=true" width="800" height="2115">
                 Loading…
                 </iframe>
               </div>

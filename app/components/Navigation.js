@@ -25,7 +25,7 @@ export default function Navigation() {
           </Link>
           <div className="hidden md:flex space-x-8">
             {/* Home, About Us, Services, Projects, Contact */}
-            <Link href="/#hero" className="text-gray-600 hover:text-gray-900">Home</Link>
+            <Link href="/home" className="text-gray-600 hover:text-gray-900">Home</Link>
             <Link href="/aboutus" className="text-gray-600 hover:text-gray-900">About Us</Link>
             <Link href="/projects" className="text-gray-600 hover:text-gray-900">Projects</Link>
             <Link href="/services" className="text-gray-600 hover:text-gray-900">Services</Link>
