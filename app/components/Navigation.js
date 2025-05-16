@@ -5,9 +5,9 @@ import Image from "next/image";
 export default function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm z-50 border-b border-gray-200">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2 -ml-4">
             <div className="relative">
               {/* Logo */}
               <Image 
@@ -21,9 +21,8 @@ export default function Navigation() {
                 unoptimized
               />
             </div>
-            <span className="text-xl font-bold text-gray-900">CC3D</span>
           </Link>
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-12 mr-4">
             {/* Home, About Us, Services, Projects, Contact */}
             <Link href="/home" className="text-gray-600 hover:text-gray-900">Home</Link>
             <Link href="/aboutus" className="text-gray-600 hover:text-gray-900">About Us</Link>
