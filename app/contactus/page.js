@@ -56,9 +56,29 @@ export default function ContactPage() {
 
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-2">Response Time</h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 mb-4">
                         We typically respond within 24 hours during business days
                       </p>
+                    </div>
+
+                    {/* PDF Buttons */}
+                    <div className="space-y-3 pt-4 border-t border-gray-200">
+                      <h3 className="font-semibold text-gray-900 mb-2">Resources</h3>
+                      <a 
+                        href="/Rendering_Portfolio.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center w-full px-4 py-2 bg-white border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
+                      >
+                        View Rendering Portfolio
+                      </a>
+                      <a 
+                        href="/Rendering_Portfolio.pdf"
+                        download
+                        className="flex items-center justify-center w-full px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+                      >
+                        Download Rendering Portfolio
+                      </a>
                     </div>
                   </div>
                 </div>
