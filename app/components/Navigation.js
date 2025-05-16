@@ -22,12 +22,12 @@ export default function Navigation() {
               />
             </div>
           </Link>
-          <div className="hidden md:flex space-x-12 mr-4">
+          <div className="hidden md:flex items-center space-x-12 mr-4">
             {/* Home, About Us, Services, Projects, Contact */}
-            <Link href="/home" className="text-gray-600 hover:text-gray-900">Home</Link>
-            <Link href="/aboutus" className="text-gray-600 hover:text-gray-900">About Us</Link>
-            <Link href="/projects" className="text-gray-600 hover:text-gray-900">Projects</Link>
-            <Link href="/services" className="text-gray-600 hover:text-gray-900">Services</Link>
+            <Link href="/home" className="text-gray-600 hover:text-gray-900 py-2">Home</Link>
+            <Link href="/aboutus" className="text-gray-600 hover:text-gray-900 py-2">About Us</Link>
+            <Link href="/projects" className="text-gray-600 hover:text-gray-900 py-2">Projects</Link>
+            <Link href="/services" className="text-gray-600 hover:text-gray-900 py-2">Services</Link>
             <Link href="/contactus" className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800">
               Contact
             </Link>
